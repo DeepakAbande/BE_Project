@@ -1,3 +1,5 @@
+import 'package:agri_app/Authentication/login.dart';
+import 'package:agri_app/Authentication/register.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +26,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+          '/' : (context) => const LoginPage(),
+          '/register': (context)=> const RegisterPage()
+      },
     );
   }
 }
